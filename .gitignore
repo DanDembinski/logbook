@@ -1,0 +1,15 @@
+#Virtualenv
+.Python
+bin
+lib
+include
+lib64
+pyvenv.cfg
+__pycache__
+
+#Python
+.pyc
+
+#flask
+microblog/tmp
+app.db
