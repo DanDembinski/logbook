@@ -21,8 +21,8 @@
 		<td>{{ entry.speed }}</td>
 		<td>{{ entry.miles }}</td>
 		<td>{{ entry.comment }}</td>
-		<td>{{ entry.portoforigin }}</td>
-		<td>{{ entry.portofcall }}</td>
+		<td><a href="{{ url_for('port', misc=entry.portoforigin) }}">{{ entry.portoforigin }}</a></td>
+		<td><a href="{{ url_for('port', misc=entry.portofcall) }}">{{ entry.portofcall }}</td>
 	</tr>
 	{% endfor %}
 </table>

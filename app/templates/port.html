@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Port of Origin</h1>
+<hr>
+<table style="width:100%" border="1">
+        <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Pilotage</th>
+                <th>Course</th>
+                <th>Speed</th>
+                <th>Miles</th>
+                <th>Comments</th>
+                <th>Port of Origin</th>
+                <th>Port of Call</th>
+        </tr>
+        {% for PoO in PoO %}
+        <tr>
+                <td>{{ PoO.dates}}</td>
+                <td>{{ PoO.times }}</td>
+                <td>{{ PoO.pilotage }}</td>
+                <td>{{ PoO.course }}</td>
+                <td>{{ PoO.speed }}</td>
+                <td>{{ PoO.miles }}</td>
+                <td>{{ PoO.comment }}</td>
+                <td><a href="{{ url_for('port', misc=PoO.portoforigin) }}">{{ PoO.portoforigin }}</a></td>
+                <td><a href="{{ url_for('port', misc=PoO.portofcall) }}">{{ PoO.portofcall }}</td>
+        </tr>
+        {% endfor %}
+</table>
+
+
+<div>
+<H1>Port of Call</h1>
+<table style="width:100%" border="1">
+        <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Pilotage</th>
+                <th>Course</th>
+                <th>Speed</th>
+                <th>Miles</th>
+                <th>Comments</th>
+                <th>Port of Origin</th>
+                <th>Port of Call</th>
+        </tr>
+        {% for PoC in PoC %}
+        <tr>
+                <td>{{ PoC.dates}}</td>
+                <td>{{ PoC.times }}</td>
+                <td>{{ PoC.pilotage }}</td>
+                <td>{{ PoC.course }}</td>
+                <td>{{ PoC.speed }}</td>
+                <td>{{ PoC.miles }}</td>
+                <td>{{ PoC.comment }}</td>
+                <td><a href="{{ url_for('port', misc=PoC.portoforigin) }}">{{ PoC.portoforigin }}</a></td>
+                <td><a href="{{ url_for('port', misc=PoC.portofcall) }}">{{ PoC.portofcall }}</td>
+        </tr>
+        {% endfor %}
+</table>
+
+
+{% endblock %}

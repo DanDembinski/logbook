@@ -13,4 +13,4 @@ __pycache__
 #flask
 tmp
 app.db
-db_migrations
+db_repository

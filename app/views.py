@@ -15,5 +15,16 @@ def index():
 @app.route('/add')
 def add():
 	return render_template('add.html',
-				title=shipname+'Add',
+				title=shipname+'- Add',
+				shipname=shipname)
+#@app.route('/port/<PoO>')
+@app.route('/port/<misc>')
+def port(misc):
+
+	PoO = entry.query.filter_by(portoforigin=misc).all()
+	PoC = entry.query.filter_by(portofcall=misc).all()
+	return render_template('port.html',
+				port=misc,
+				PoO=PoO,
+				PoC=PoC,
 				shipname=shipname)

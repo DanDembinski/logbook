@@ -6,3 +6,5 @@ app.config.from_object('config')
 db = SQLAlchemy(app)
 
 from app import views, models
+
+SQLALCHEMY_TRACK_MODIFICATIONS=True
