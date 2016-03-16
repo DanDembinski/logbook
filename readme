@@ -6,7 +6,7 @@ A web based navigation logbook. It is designed primarily for marine use.
 - Allow users to add/edit descriptions and notes about ports
 - Keep track of the number of vists to each port
 - Last visit of each port
-- Edit log entries
+- Edit log entries --> Entries can now be deleted
 - Impliment user creation/login
 - keep track of which user is entering information
 - css

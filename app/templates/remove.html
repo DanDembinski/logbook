@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action="" method="post" name="RemoveForm">
+	{{ form.hidden_tag() }}
+	ID number to remove:{{ form.number(size=5) }} <input type="Submit", Value="Remove">
+</form>
+<table style="width:100%" border="1">
+        <tr>
+		<th>ID</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Pilotage</th>
+                <th>Course</th>
+                <th>Speed</th>
+                <th>Miles</th>
+                <th>Comments</th>
+                <th>Port of Origin</th>
+                <th>Port of Call</th>
+        </tr>
+        {% for entry in entry %}
+        <tr>
+		<td><b>{{ entry.id }}</b></td>
+                <td>{{ entry.dates }}</td>
+                <td>{{ entry.times }}</td>
+                <td>{{ entry.pilotage }}</td>
+                <td>{{ entry.course }}</td>
+                <td>{{ entry.speed }}</td>
+                <td>{{ entry.miles }}</td>
+                <td>{{ entry.comment }}</td>
+                <td>{{ entry.portoforigin }}</td>
+                <td>{{ entry.portofcall }}</td>
+        </tr>
+        {% endfor %}
+</table>
+
+
+{% endblock %}

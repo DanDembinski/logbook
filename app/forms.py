@@ -11,3 +11,6 @@ class LogData(Form):
 	comments = StringField('comments')
 	portoforigin = StringField('portoforigin')
 	portofcall = StringField('portofcall')
+
+class removeForm(Form):
+	number = IntegerField('number')
