@@ -2,4 +2,20 @@
 
 {% block content %}
 This is where you will be able to add new logs to the database. It will eventually be streamlined.
+<hr>
+<form action="" method="post" name="entry">
+	{{form.hidden_tag() }}
+	<p>
+		Date:	{{ form.dates(size=20) }}<br><br>
+		Time:	{{ form.times(size=20) }}<br><br>
+		Pilotage:	{{ form.pilotage(size=80) }}<br><br>	
+		Course:	{{ form.course(size=20) }}<br><br>
+		Speed:	{{ form.speed(size=20) }}<br><br>
+		Miles:	{{ form.miles(size=50) }}<br><br>
+		Comments:	{{ form.comments(size=100) }}<br><br>
+		Port of Origin:	{{ form.portoforigin(size=50) }}<br><br>
+		Port of Call:	{{ form.portofcall(size=50) }}<br><br>
+	</P>
+	<p><input type="submit" value="Submit"></P>
+</form>
 {% endblock %}

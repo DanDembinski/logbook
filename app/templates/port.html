@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Port of Origin</h1>
-<hr>
+<div><h1><u>{{ port }}</u></h1>
+Additional information on the port will be added in time</div>
+<div>
+<h3>Port of Origin</h3>
 <table style="width:100%" border="1">
         <tr>
                 <th>Date</th>
@@ -29,10 +31,12 @@
         </tr>
         {% endfor %}
 </table>
-
+</div>
+<br>
+<hr>
 
 <div>
-<H1>Port of Call</h1>
+<h3>Port of Call</h3>
 <table style="width:100%" border="1">
         <tr>
                 <th>Date</th>
@@ -59,6 +63,6 @@
         </tr>
         {% endfor %}
 </table>
-
+</div>
 
 {% endblock %}

@@ -11,9 +11,12 @@ class entry(db.Model):
 	comment = db.Column(db.String(500), index=True, unique=False)
 	portoforigin = db.Column(db.String(120), index=True, unique=False)
 	portofcall = db.Column(db.String(120), index=True, unique=False)
-	
-#	def get_id(self):
-#		try:
-#			return unicode(self.id)
-#		except NameError:
-#			return str(self.id)
+
+
+class ports(db.Model):
+	id = db.Column(db.Integer, primary_key=True)
+	desc = db.Column(db.String, index=True, unique=False)
+	notes = db.Column(db.String, index=True, unique=False)
+	vists = db.Column(db.String, index=True, unique=False)
+	lastvisit=db.Column(db.String, index=True, unique=False)
+	name=db.Column(db.String(120), index=True, unique=False) #linked with portoforigin/portofcall..Maybe. I need to read up on that some more
