@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<table style="width:100%" border="1">
+	<tr>
+		<th>Date</th>
+		<th>Time</th>
+		<th>Pilotage</th>
+		<th>Course</th>
+		<th>Speed</th>
+		<th>Miles</th>
+		<th>Comments</th>
+		<th>Port of Origin</th>
+		<th>Port of Call</th>
+	</tr>
+	{% for entry in entry %}
+	<tr>
+		<td>{{ entry.dates}}</td>
+		<td>{{ entry.times }}</td>
+		<td>{{ entry.pilotage }}</td>
+		<td>{{ entry.course }}</td>
+		<td>{{ entry.speed }}</td>
+		<td>{{ entry.miles }}</td>
+		<td>{{ entry.comment }}</td>
+		<td>{{ entry.portoforigin }}</td>
+		<td>{{ entry.portofcall }}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endblock %}
