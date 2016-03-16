@@ -11,6 +11,6 @@ __pycache__
 .pyc
 
 #flask
-microblog/tmp
+tmp
 app.db
 db_migrations

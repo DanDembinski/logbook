@@ -7,7 +7,7 @@
                 {% endif %}
         </head>
         <body>
-                <div>Holder: <a href="{{url_for('index')}}">Home</a></div>
+                <div>{{ shipname }}: <a href="{{url_for('index')}}">Home</a></div>
         <hr>
         {% block content %}{% endblock %}
         </body>
