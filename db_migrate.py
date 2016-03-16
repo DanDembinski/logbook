@@ -1,4 +1,4 @@
-#!flask/bin/python
+#!logbook/bin/python
 
 import imp
 from migrate.versioning import api

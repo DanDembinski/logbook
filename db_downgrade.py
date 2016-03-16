@@ -1,4 +1,4 @@
-#!flask/bin/python
+#!logbook/bin/python
 
 from migrate.versioning import api
 

@@ -12,3 +12,8 @@ class entry(db.Model):
 	portoforigin = db.Column(db.String(120), index=True, unique=False)
 	portofcall = db.Column(db.String(120), index=True, unique=False)
 	
+	def get_id(self):
+		try:
+			return unicode(self.id)
+		except NameError:
+			return str(self.id)
