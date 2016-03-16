@@ -11,3 +11,9 @@ def index():
 				title=shipname+'- Home',
 				shipname=shipname,
 				entry=entries)
+
+@app.route('/add')
+def add():
+	return render_template('add.html',
+				title=shipname+'Add',
+				shipname=shipname)
