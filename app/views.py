@@ -38,11 +38,12 @@ def remove():
 
 	entries = entry.query.all()
 	return render_template('remove.html',
+				title=shipname+'-Remove',
 				entry=entries,
+				shipname=shipname,
 				form=form)
 				
 
-#@app.route('/port/<PoO>')
 @app.route('/port/<misc>')
 def port(misc):
 
